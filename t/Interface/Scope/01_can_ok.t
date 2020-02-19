@@ -1,6 +1,6 @@
 use Test::Most;
 
-#use Test::OpenTracing::Interface::Scope;
+use Test::OpenTracing::Interface::Scope;
 
 can_ok('Test::OpenTracing::Interface::Scope',
     'can_interface_ok'
