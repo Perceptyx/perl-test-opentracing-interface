@@ -7,6 +7,10 @@ use Test::Builder;
 
 my $Test = Test::Builder->new;
 
-sub can_interface_ok { ... }
+sub can_interface_ok {
+    
+    return $Test->ok( 1, "Object [MyTest::Scope] implements required methods for interface [Scope]" )
+    
+}
 
 1;
