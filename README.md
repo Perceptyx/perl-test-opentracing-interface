@@ -5,9 +5,9 @@ Make integration testing easy, for all you care about are spans!
 
 ## SYNOPSIS
 
-```perl
+### Testing Traces
 
-use Test::Deep;
+```perl
 use Test::OpenTracing;
 
 $ENV{OPENTRACING_IMPLEMENTATATION} = 'Test';
@@ -39,19 +39,49 @@ cmp_deeply_global_tracer (
 
 ```
 
+### Testing Interface Methods
+
+```perl
+use Test::OpenTracing;
+
+opentracing_interface_ok_span_context( 'MyImplementation::SpanContext',
+    "'MyImplementation' class implements required methods for 'SpanContext'";
+
+```
+
+### Testing Implementation Typechecks
+
+```perl
+use Test::OpenTracing;
+
+opentracing_implementation_ok_span_context( 'MyImplementation::SpanContext',
+    "'MyImplementation' class is strict on typechecks for 'SpanContext'";
+
+```
+
 
 ## DESCRIPTION
 
 Test::OpenTracing is an easy way to check your OpenTracing compliant framework
-integrations.
+integrations and implementations.
 
-This is a `cmp_deeply` like test, that works on a special tracer implementation:
-`OpenTracing::Implementation::Test`.
+The `cmp_deeply_global_tracer` is a `cmp_deeply` like test, that works on a
+special tracer implementation: `OpenTracing::Implementation::Test`.
+
+The `opentracing_interface_ok` test, basically run `can_ok` tests.
+
+The `opentracing_implementation_ok` test run a series of test against each
+(required) method, to see if they are fault tolerant or strict on accepting in
+coming parameters and returned results.
 
 
 ## EXPORTED SUBROUTINES
 
 ### cmp_deeply_global_tracer
+
+### opentracing_interface_ok
+
+### opentracing_implementation_ok
 
 
 ## LICENSE INFORMATION
