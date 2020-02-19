@@ -1,3 +1,4 @@
 cpanfile
 MANIFEST
 t/Interface/Scope/00_use_ok.t
+t/Interface/Scope/00_can_ok.t
