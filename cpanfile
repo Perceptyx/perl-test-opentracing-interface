@@ -1,4 +1,5 @@
 on 'runtime' => sub {
+    requires    "Ref::Util";
     requires    "Test::Builder";
 };
 
