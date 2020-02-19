@@ -1,6 +1,6 @@
 on 'runtime' => sub {
-    requires    "Test:Builder";
-}
+    requires    "Test::Builder";
+};
 
 on 'develop' => sub {
     requires    "ExtUtils::MakeMaker::CPANfile";
