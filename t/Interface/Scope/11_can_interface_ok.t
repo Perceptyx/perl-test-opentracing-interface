@@ -10,5 +10,9 @@ test_out( "ok 1 - Object [MyTest::Scope] implements required methods for interfa
 Test::OpenTracing::Interface::Scope::can_interface_ok( $test_obj );
 test_test( "Tests PASS when 'can_interface_ok' for object - ok" );
 
+test_out( "ok 1 - Class [MyTest::Scope] implements required methods for interface [Scope]" );
+Test::OpenTracing::Interface::Scope::can_interface_ok( 'MyTest::Scope' );
+test_test( "Tests PASS when 'can_interface_ok' for class - ok" );
+
 
 done_testing();
