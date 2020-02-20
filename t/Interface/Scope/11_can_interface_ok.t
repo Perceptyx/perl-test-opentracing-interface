@@ -3,9 +3,17 @@ use Test::Most;
 use Test::OpenTracing::Interface::Scope;
 
 use lib 't/lib/';
-use Test::OpenTracing::Interface::Tester qw/run_tests_can_interface_ok/;
+use Test::OpenTracing::Interface::Tester;
 
-run_tests_can_interface_ok( Scope => qw/close get_span/ );
+my $Test = Test::OpenTracing::Interface::Tester->new(
+    interface_name => 'Scope',
+    interface_methods => [
+        'close',
+        'get_span',
+    ],
+);
+
+$Test->run_tests_can_interface_ok;
 
 done_testing();
 
@@ -15,3 +23,5 @@ package MyTest::Scope;
 
 sub close;
 sub get_span;
+
+1;
