@@ -8,6 +8,7 @@ on 'develop' => sub {
 };
 
 on 'test' => sub {
+    requires    "Object::Tiny";
     requires    "Test::Most";
     requires    "Test::Builder::Tester";
 };
