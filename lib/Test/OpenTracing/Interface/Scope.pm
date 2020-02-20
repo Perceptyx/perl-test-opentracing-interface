@@ -18,5 +18,4 @@ sub can_interface_ok {
     
 }
 
-sub foo; sub bar; sub qux;
 1;
