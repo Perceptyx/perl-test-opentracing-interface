@@ -1,4 +1,5 @@
 cpanfile
+lib/Test/OpenTracing/Interface/Scope.pm
 MANIFEST
 t/Interface/Scope/00_use_ok.t
 t/Interface/Scope/01_can_ok.t
