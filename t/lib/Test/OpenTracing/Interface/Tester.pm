@@ -2,12 +2,12 @@ package Test::OpenTracing::Interface::Tester;
 
 use Exporter 'import';
 
-our @EXPORT_OK = qw/run_tests/;
+our @EXPORT_OK = qw/run_tests_can_interface_ok/;
 
 use Test::Builder::Tester;
 
 
-sub run_tests {
+sub run_tests_can_interface_ok {
     my $interface_name = shift;
     my @interface_methods = @_;
     
