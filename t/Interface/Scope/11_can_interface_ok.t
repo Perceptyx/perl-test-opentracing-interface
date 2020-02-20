@@ -3,10 +3,7 @@ use Test::Builder::Tester;
 
 use Test::OpenTracing::Interface::Scope;
 
-my $test_obj = bless {}, 'MyTest::Scope';
-
 run_tests( Scope => qw/close get_span/ );
-
 
 done_testing();
 
@@ -21,7 +18,9 @@ sub run_tests {
     my @diag_messages = map {
         "MyTest::Empty->can('$_') failed"
     } @interface_methods;
-        
+    
+    my $test_obj = bless {}, $test_class;
+    
     test_out( "ok 1 - $test_class->can_interface( '$interface_name' )" );
     Test::OpenTracing::Interface::Scope::can_interface_ok( $test_obj );
     test_test( "Tests PASS when 'can_interface_ok' for object" );
