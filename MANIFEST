@@ -1,6 +1,7 @@
 cpanfile
 lib/Test/OpenTracing/Interface/Scope.pm
 lib/Test/OpenTracing/Interface/ScopeManager.pm
+lib/Test/OpenTracing/Interface/Span.pm
 lib/Test/OpenTracing/Test/CanInterface.pm
 lib/Test/OpenTracing.pm
 MANIFEST
@@ -10,4 +11,7 @@ t/Interface/Scope/11_can_interface_ok.t
 t/Interface/ScopeManager/00_use_ok.t
 t/Interface/ScopeManager/01_can_ok.t
 t/Interface/ScopeManager/11_can_interface_ok.t
+t/Interface/Span/00_use_ok.t
+t/Interface/Span/01_can_ok.t
+t/Interface/Span/11_can_interface_ok.t
 t/lib/Test/OpenTracing/Interface/Tester.pm
