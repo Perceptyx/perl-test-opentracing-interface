@@ -1,11 +1,11 @@
 package Test::OpenTracing::Interface::Scope;
 
-use Test::OpenTracing::TestRunner;
+use Test::OpenTracing::Test::CanInterface;
 
 sub can_interface_ok {
     my $thing = shift;
     
-    my $Test = Test::OpenTracing::TestRunner->new(
+    my $Test = Test::OpenTracing::Test::CanInterface->new(
         interface_name => 'Scope',
         interface_methods => [ 
             'close',
@@ -13,7 +13,7 @@ sub can_interface_ok {
         ],
     );
     
-    return $Test->run_tests_can_interface_ok( $thing );
+    return $Test->run_tests( $thing );
 }
 
 1;

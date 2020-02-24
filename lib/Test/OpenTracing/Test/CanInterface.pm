@@ -1,4 +1,4 @@
-package Test::OpenTracing::TestRunner;
+package Test::OpenTracing::Test::CanInterface;
 
 use strict;
 use warnings;
@@ -9,7 +9,7 @@ use Scalar::Util qw/blessed/;
 
 use Test::Builder;
 
-sub run_tests_can_interface_ok{
+sub run_tests{
     my $self = shift;
     my $thing = shift;
     
@@ -27,9 +27,9 @@ sub run_tests_can_interface_ok{
         }
     }
     
-    my $test_name = $self->test_name( $thing );
+    my $test_message = $self->test_message( $thing );
     my $ok = scalar @failures ? 0 : 1;
-    return $Test->ok( $ok, $test_name );
+    return $Test->ok( $ok, $test_message );
     
 }
 
@@ -40,7 +40,7 @@ sub test_class_name {
     return blessed( $thing ) // "$thing";
 }
 
-sub test_name {
+sub test_message {
     my $self = shift;
     my $thing = shift;
     

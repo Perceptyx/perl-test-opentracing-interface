@@ -1,6 +1,6 @@
 cpanfile
 lib/Test/OpenTracing/Interface/Scope.pm
-lib/Test/OpenTracing/TestRunner.pm
+lib/Test/OpenTracing/Test/CanInterface.pm
 lib/Test/OpenTracing.pm
 MANIFEST
 t/Interface/Scope/00_use_ok.t
