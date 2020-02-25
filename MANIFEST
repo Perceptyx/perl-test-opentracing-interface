@@ -21,4 +21,4 @@ t/SpanContext/11_can_interface_ok.t
 t/Tracer/00_use_ok.t
 t/Tracer/01_can_ok.t
 t/Tracer/11_can_interface_ok.t
-t/lib/Test/OpenTracing/Interface/Tester.pm
+t/lib/Test/OpenTracing/Tester/CanInterface.pm

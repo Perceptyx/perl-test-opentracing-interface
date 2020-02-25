@@ -3,9 +3,9 @@ use Test::Most;
 use Test::OpenTracing::SpanContext;
 
 use lib 't/lib/';
-use Test::OpenTracing::Interface::Tester;
+use Test::OpenTracing::Tester::CanInterface;
 
-my $Test = Test::OpenTracing::Interface::Tester->new(
+my $Test = Test::OpenTracing::Tester::CanInterface->new(
     interface_name => 'SpanContext',
     interface_methods => [
         'get_baggage_item',
