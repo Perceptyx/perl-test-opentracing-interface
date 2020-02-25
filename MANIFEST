@@ -1,5 +1,4 @@
 cpanfile
-lib/Test/OpenTracing/Test/CanInterface.pm
 lib/Test/OpenTracing/Scope.pm
 lib/Test/OpenTracing/ScopeManager.pm
 lib/Test/OpenTracing/Span.pm
