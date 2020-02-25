@@ -1,15 +1,15 @@
 use Test::Most;
 
-use Test::OpenTracing::Interface::ScopeManager;
+use Test::OpenTracing::Scope;
 
 use lib 't/lib/';
 use Test::OpenTracing::Interface::Tester;
 
 my $Test = Test::OpenTracing::Interface::Tester->new(
-    interface_name => 'ScopeManager',
+    interface_name => 'Scope',
     interface_methods => [
-        'activate_span',
-        'get_active_scope'
+        'close',
+        'get_span',
     ],
 );
 
@@ -19,9 +19,9 @@ done_testing();
 
 
 
-package MyTest::ScopeManager;
+package MyTest::Scope;
 
-sub activate_span;
-sub get_active_scope;
+sub close;
+sub get_span;
 
 1;

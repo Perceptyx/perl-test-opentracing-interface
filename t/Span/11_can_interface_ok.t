@@ -1,6 +1,6 @@
 use Test::Most;
 
-use Test::OpenTracing::Interface::Span;
+use Test::OpenTracing::Span;
 
 use lib 't/lib/';
 use Test::OpenTracing::Interface::Tester;

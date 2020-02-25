@@ -1,6 +1,6 @@
-package Test::OpenTracing::Interface::ScopeManager;
+package Test::OpenTracing::ScopeManager;
 
-use Test::OpenTracing::Test::CanInterface;
+use Test::OpenTracing;
 
 sub can_interface_ok {
     my $thing = shift;

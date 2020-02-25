@@ -1,15 +1,15 @@
 use Test::Most;
 
-use Test::OpenTracing::Interface::Scope;
+use Test::OpenTracing::SpanContext;
 
 use lib 't/lib/';
 use Test::OpenTracing::Interface::Tester;
 
 my $Test = Test::OpenTracing::Interface::Tester->new(
-    interface_name => 'Scope',
+    interface_name => 'SpanContext',
     interface_methods => [
-        'close',
-        'get_span',
+        'get_baggage_item',
+        'with_baggage_item',
     ],
 );
 
@@ -19,9 +19,9 @@ done_testing();
 
 
 
-package MyTest::Scope;
+package MyTest::SpanContext;
 
-sub close;
-sub get_span;
+sub get_baggage_item;
+sub with_baggage_item;
 
 1;
