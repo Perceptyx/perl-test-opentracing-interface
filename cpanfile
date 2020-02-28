@@ -2,7 +2,7 @@ on 'runtime' => sub {
     requires    "Moo";
     requires    "Ref::Util";
     requires    "Test::Builder";
-    requires    "Types::Standard";
+    requires    "Types::Standard", '>=1.010';
 };
 
 on 'develop' => sub {
