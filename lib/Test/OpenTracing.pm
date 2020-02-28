@@ -70,28 +70,27 @@ sub run_tests{
     my @failures;
     foreach my $test_method ( sort @{$self->interface_methods} ) {
         next if $self->test_this->can($test_method);
-        $Test->diag(
-            $self->this_name
-            .
-            "->can('"
-            .
-            $test_method
-            .
-            "') failed"
-        );
+        $Test->diag( $self->diag_message($test_method) );
         push @failures, $test_method;
     }
     
-    my $test_message = $self->test_message( $self->test_this );
     my $ok = scalar @failures ? 0 : 1;
-    return $Test->ok( $ok, $test_message );
+    return $Test->ok( $ok, $self->test_message );
     
 }
 
 
+sub diag_message {
+    my $self = shift;
+    my $method_name = shift;
+    
+    my $this_name = $self->this_name();
+    
+    return "$this_name->can('$method_name') failed"
+}
+
 sub test_message {
     my $self = shift;
-    my $this = shift;
     
     my $this_name = $self->this_name();
     my $interface_name = $self->interface_name;
