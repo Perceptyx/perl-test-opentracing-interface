@@ -15,9 +15,9 @@ use Test::Builder;
 
 sub run_tests{
     my $self = shift;
-    my $thing = shift;
+    my $this = shift;
     
-    my $test_class_name = $self->test_class_name($thing);
+    my $test_class_name = $self->test_class_name($this);
     
     my $Test = Test::Builder->new;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
@@ -25,13 +25,13 @@ sub run_tests{
     no strict qw/refs/;
     my @failures;
     foreach my $test_method ( sort @{$self->interface_methods} ) {
-        unless ( $thing->can($test_method) ) {
+        unless ( $this->can($test_method) ) {
             $Test->diag("$test_class_name->can('$test_method') failed");
             push @failures, $test_method;
         }
     }
     
-    my $test_message = $self->test_message( $thing );
+    my $test_message = $self->test_message( $this );
     my $ok = scalar @failures ? 0 : 1;
     return $Test->ok( $ok, $test_message );
     
@@ -39,16 +39,16 @@ sub run_tests{
 
 sub test_class_name {
     my $self = shift;
-    my $thing = shift;
+    my $this = shift;
     
-    return blessed( $thing ) // "$thing";
+    return blessed( $this ) // "$this";
 }
 
 sub test_message {
     my $self = shift;
-    my $thing = shift;
+    my $this = shift;
     
-    my $test_class_name = $self->test_class_name($thing);
+    my $test_class_name = $self->test_class_name($this);
     my $interface_name = $self->interface_name;
     
     return "${test_class_name}->can_interface( '$interface_name' )"
