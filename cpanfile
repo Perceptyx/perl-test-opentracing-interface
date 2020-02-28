@@ -2,6 +2,7 @@ on 'runtime' => sub {
     requires    "Moo";
     requires    "Ref::Util";
     requires    "Test::Builder";
+    requires    "Types::Standard";
 };
 
 on 'develop' => sub {

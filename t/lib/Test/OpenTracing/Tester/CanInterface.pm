@@ -74,5 +74,12 @@ sub diag_messages {
 }
 
 
+# Since there are is a 'ClassName' type-constraint, it needs to have an ISA
+#
+package MyTest::Empty;
+
+our @ISA;
+
+
 
 1;

@@ -12,15 +12,18 @@ use Moo;
 
 
 use Scalar::Util qw/blessed/;
+use Types::Standard qw/ClassName Object Str/;
 
 
 
 has interface_name => (
     is => 'ro',
+    isa => Str,
 );
 
 has test_this => (
     is => 'ro',
+   isa => ClassName | Object,
 );
 
 sub this_name {
@@ -44,11 +47,13 @@ extends 'Test::OpenTracing';
 
 
 use Test::Builder;
+use Types::Standard qw/ArrayRef Str/;
 
 
 
 has interface_methods => (
     is => 'ro',
+    isa => ArrayRef[ Str ]
 );
 
 
