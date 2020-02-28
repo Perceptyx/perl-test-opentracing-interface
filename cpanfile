@@ -1,4 +1,5 @@
 on 'runtime' => sub {
+    requires    "Moo";
     requires    "Ref::Util";
     requires    "Test::Builder";
 };
@@ -8,7 +9,6 @@ on 'develop' => sub {
 };
 
 on 'test' => sub {
-    requires    "Object::Tiny";
     requires    "Test::Most";
     requires    "Test::Builder::Tester";
 };

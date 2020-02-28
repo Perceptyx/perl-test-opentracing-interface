@@ -5,7 +5,9 @@ use warnings;
 
 use Test::Builder::Tester;
 
-use Object::Tiny qw/interface_name interface_methods/;
+use Moo;
+
+has [ qw/interface_name interface_methods/ ] => ( is => 'ro' );
 
 sub run_tests_can_interface_ok {
     my $self = shift;

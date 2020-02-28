@@ -19,14 +19,14 @@ has interface_name => (
     is => 'ro',
 );
 
-has this => (
+has test_this => (
     is => 'ro',
 );
 
 sub this_name {
     my $self = shift;
     
-    return blessed( $self->this ) // $self->this;
+    return blessed( $self->test_this ) // $self->test_this;
 }
 
 
@@ -64,7 +64,7 @@ sub run_tests{
     no strict qw/refs/;
     my @failures;
     foreach my $test_method ( sort @{$self->interface_methods} ) {
-        unless ( $self->this->can($test_method) ) {
+        unless ( $self->test_this->can($test_method) ) {
             $Test->diag(
                 $self->this_name
                 .
@@ -78,7 +78,7 @@ sub run_tests{
         }
     }
     
-    my $test_message = $self->test_message( $self->this );
+    my $test_message = $self->test_message( $self->test_this );
     my $ok = scalar @failures ? 0 : 1;
     return $Test->ok( $ok, $test_message );
     
