@@ -69,18 +69,17 @@ sub run_tests{
     no strict qw/refs/;
     my @failures;
     foreach my $test_method ( sort @{$self->interface_methods} ) {
-        unless ( $self->test_this->can($test_method) ) {
-            $Test->diag(
-                $self->this_name
-                .
-                "->can('"
-                .
-                $test_method
-                .
-                "') failed"
-            );
-            push @failures, $test_method;
-        }
+        next if $self->test_this->can($test_method);
+        $Test->diag(
+            $self->this_name
+            .
+            "->can('"
+            .
+            $test_method
+            .
+            "') failed"
+        );
+        push @failures, $test_method;
     }
     
     my $test_message = $self->test_message( $self->test_this );
