@@ -6,8 +6,9 @@ sub can_interface_ok {
     my $thing = shift;
     
     my $Test = Test::OpenTracing::CanInterface->new(
-        interface_name => 'Span',
-        interface_methods => [
+        test_this           => $thing,
+        interface_name      => 'Span',
+        interface_methods   => [
             'finish',
             'get_baggage_item',
             'get_context',
@@ -18,7 +19,7 @@ sub can_interface_ok {
         ],
     );
     
-    return $Test->run_tests( $thing );
+    return $Test->run_tests;
 }
 
 1;

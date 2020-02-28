@@ -6,14 +6,15 @@ sub can_interface_ok {
     my $thing = shift;
     
     my $Test = Test::OpenTracing::CanInterface->new(
-        interface_name => 'Scope',
-        interface_methods => [ 
+        test_this           => $thing,
+        interface_name      => 'Scope',
+        interface_methods   => [ 
             'close',
             'get_span',
         ],
     );
     
-    return $Test->run_tests( $thing );
+    return $Test->run_tests;
 }
 
 1;
