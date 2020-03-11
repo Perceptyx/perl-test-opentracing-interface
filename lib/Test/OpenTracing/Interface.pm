@@ -1,4 +1,4 @@
-package Test::OpenTracing;
+package Test::OpenTracing::Interface;
 
 use strict;
 use warnings;
@@ -34,7 +34,7 @@ sub this_name {
 
 
 
-package Test::OpenTracing::CanInterface;
+package Test::OpenTracing::Interface::CanInterface;
 
 use strict;
 use warnings;
@@ -42,7 +42,7 @@ use warnings;
 
 
 use Moo;
-extends 'Test::OpenTracing';
+extends 'Test::OpenTracing::Interface';
 
 
 

@@ -1,11 +1,11 @@
 package Test::OpenTracing::Interface::Tracer;
 
-use Test::OpenTracing;
+use Test::OpenTracing::Interface;
 
 sub can_interface_ok {
     my $thing = shift;
     
-    my $Test = Test::OpenTracing::CanInterface->new(
+    my $Test = Test::OpenTracing::Interface::CanInterface->new(
         test_this           => $thing,
         interface_name      => 'Tracer',
         interface_methods   => [
