@@ -1,4 +1,4 @@
-package Test::OpenTracing::ScopeManager;
+package Test::OpenTracing::Interface::SpanContext;
 
 use Test::OpenTracing;
 
@@ -7,10 +7,10 @@ sub can_interface_ok {
     
     my $Test = Test::OpenTracing::CanInterface->new(
         test_this           => $thing,
-        interface_name      => 'ScopeManager',
+        interface_name      => 'SpanContext',
         interface_methods   => [
-            'activate_span',
-            'get_active_scope'
+            'get_baggage_item',
+            'with_baggage_item',
         ],
     );
     

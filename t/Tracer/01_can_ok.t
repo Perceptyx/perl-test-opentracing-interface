@@ -1,8 +1,8 @@
 use Test::Most;
 
-use Test::OpenTracing::Tracer;
+use Test::OpenTracing::Interface::Tracer;
 
-can_ok('Test::OpenTracing::Tracer',
+can_ok('Test::OpenTracing::Interface::Tracer',
     'can_interface_ok'
 );
 

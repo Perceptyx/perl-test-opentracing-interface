@@ -39,7 +39,7 @@ sub test_method {
     my $method_name = shift;
     
     my $test_method = join '::',
-        'Test::OpenTracing',
+        'Test::OpenTracing::Interface',
         $self->interface_name(),
         $method_name;
     

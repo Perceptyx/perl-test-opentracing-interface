@@ -1,4 +1,4 @@
-package Test::OpenTracing::Scope;
+package Test::OpenTracing::Interface::Scope;
 
 use Test::OpenTracing;
 

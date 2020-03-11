@@ -1,6 +1,6 @@
 use Test::Most;
 
-use Test::OpenTracing::Tracer;
+use Test::OpenTracing::Interface::Tracer;
 
 use lib 't/lib/';
 use Test::OpenTracing::Tester::CanInterface;

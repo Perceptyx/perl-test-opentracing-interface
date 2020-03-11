@@ -1,8 +1,8 @@
 use Test::Most;
 
-use Test::OpenTracing::Span;
+use Test::OpenTracing::Interface::Span;
 
-can_ok('Test::OpenTracing::Span',
+can_ok('Test::OpenTracing::Interface::Span',
     'can_interface_ok'
 );
 

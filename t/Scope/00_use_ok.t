@@ -1,7 +1,7 @@
 use Test::Most;
 
 BEGIN {
-    use_ok( 'Test::OpenTracing::Scope' )
+    use_ok( 'Test::OpenTracing::Interface::Scope' )
 }
 
 done_testing();
