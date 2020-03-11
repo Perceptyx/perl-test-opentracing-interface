@@ -4,8 +4,9 @@ lib/Test/OpenTracing/Interface/ScopeManager.pm
 lib/Test/OpenTracing/Interface/Span.pm
 lib/Test/OpenTracing/Interface/SpanContext.pm
 lib/Test/OpenTracing/Interface/Tracer.pm
-lib/Test/OpenTracing.pm
+lib/Test/OpenTracing/Interface.pm
 MANIFEST
+t/lib/Test/OpenTracing/Tester/CanInterface.pm
 t/Scope/00_use_ok.t
 t/Scope/01_can_ok.t
 t/Scope/11_can_interface_ok.t
@@ -21,4 +22,3 @@ t/SpanContext/11_can_interface_ok.t
 t/Tracer/00_use_ok.t
 t/Tracer/01_can_ok.t
 t/Tracer/11_can_interface_ok.t
-t/lib/Test/OpenTracing/Tester/CanInterface.pm
