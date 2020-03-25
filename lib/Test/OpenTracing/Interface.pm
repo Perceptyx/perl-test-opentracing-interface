@@ -23,7 +23,7 @@ has interface_name => (
 
 has test_this => (
     is => 'ro',
-   isa => ClassName | Object,
+    isa => ClassName | Object,
 );
 
 sub this_name {
