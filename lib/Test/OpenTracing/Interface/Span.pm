@@ -3,6 +3,7 @@ package Test::OpenTracing::Interface::Span;
 use Test::OpenTracing::Interface;
 
 sub can_all_ok {
+    my $class = shift;
     my $thing = shift;
     
     my $Test = Test::OpenTracing::Interface::CanAll->new(
