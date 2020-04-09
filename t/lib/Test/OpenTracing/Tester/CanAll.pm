@@ -7,7 +7,16 @@ use Test::Builder::Tester;
 
 use Moo;
 
-has [ qw/interface_name interface_methods/ ] => ( is => 'ro' );
+has [ qw/interface_name interface_methods/ ] => ( is => 'ro', required => 1 );
+
+has interface_class => ( is => 'lazy', init_arg => undef );
+
+sub _build_interface_class {
+    my $self = shift;
+    join '::',
+        'Test::OpenTracing::Interface',
+        $self->interface_name()
+}
 
 sub run_tests_can_all_ok {
     my $self = shift;
