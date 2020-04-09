@@ -34,7 +34,7 @@ sub this_name {
 
 
 
-package Test::OpenTracing::Interface::CanInterface;
+package Test::OpenTracing::Interface::CanAll;
 
 use strict;
 use warnings;

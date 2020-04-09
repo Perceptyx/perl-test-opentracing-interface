@@ -1,4 +1,4 @@
-package Test::OpenTracing::Tester::CanInterface;
+package Test::OpenTracing::Tester::CanAll;
 
 use strict;
 use warnings;

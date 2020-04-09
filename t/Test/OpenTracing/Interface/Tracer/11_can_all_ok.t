@@ -3,9 +3,9 @@ use Test::Most;
 use Test::OpenTracing::Interface::Tracer;
 
 use lib 't/lib/';
-use Test::OpenTracing::Tester::CanInterface;
+use Test::OpenTracing::Tester::CanAll;
 
-my $Test = Test::OpenTracing::Tester::CanInterface->new(
+my $Test = Test::OpenTracing::Tester::CanAll->new(
     interface_name => 'Tracer',
     interface_methods => [
         'extract_context',

@@ -5,7 +5,7 @@ use Test::OpenTracing::Interface;
 sub can_all_ok {
     my $thing = shift;
     
-    my $Test = Test::OpenTracing::Interface::CanInterface->new(
+    my $Test = Test::OpenTracing::Interface::CanAll->new(
         test_this           => $thing,
         interface_name      => 'Span',
         interface_methods   => [

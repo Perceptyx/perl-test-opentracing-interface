@@ -10,7 +10,7 @@ LICENSE.md
 MANIFEST
 Makefile.PL
 README.md
-t/lib/Test/OpenTracing/Tester/CanInterface.pm
+t/lib/Test/OpenTracing/Tester/CanAll.pm
 t/Test/OpenTracing/Interface/ContextReference/00_use_ok.t
 t/Test/OpenTracing/Interface/ContextReference/01_can_ok.t
 t/Test/OpenTracing/Interface/ContextReference/11_can_all_ok.t
