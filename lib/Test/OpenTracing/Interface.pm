@@ -95,7 +95,7 @@ sub test_message {
     my $this_name = $self->this_name();
     my $interface_name = $self->interface_name;
     
-    return "$this_name->can_interface( '$interface_name' )"
+    return "$this_name->can_all_ok( '$interface_name' )"
 }
 
 

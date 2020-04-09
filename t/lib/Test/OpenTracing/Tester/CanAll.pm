@@ -22,7 +22,7 @@ sub run_tests_can_all_ok {
     
     test_out( $self->not_ok_message('MyTest::Empty') );
     test_diag( sort $self->diag_messages );
-    test_fail( +23 ); # the test is run at line 46
+    test_fail( +23 ); # the test is run at line 48
     $self->test_method_can_all_ok( 'MyTest::Empty' );
     test_test( "Tests FAIL when 'can_all_ok' for bad class" );
     
@@ -45,7 +45,7 @@ sub test_method {
     
     no strict qw/refs/;
     
-    $test_method->( @_ ) # if this is not line 46, than test_fail, will fail
+    $test_method->( @_ ) # if this is not line 48, than test_fail, will fail
 }
 
 sub test_object { bless {}, $_[0]->test_class_name() }
@@ -54,7 +54,7 @@ sub ok_message {
     my $self = shift;
     my $test_class = shift // $self->test_class_name;
     my $interface_name = $self->interface_name;
-    return "ok 1 - $test_class->can_interface( '$interface_name' )"
+    return "ok 1 - $test_class->can_all_ok( '$interface_name' )"
 }
 
 sub not_ok_message {
