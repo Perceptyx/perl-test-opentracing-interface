@@ -31,7 +31,7 @@ sub run_tests_can_all_ok {
     
     test_out( $self->not_ok_message('MyTest::Empty') );
     test_diag( sort $self->diag_messages );
-    test_fail( +23 ); # the test is run at line 48
+    test_fail( +20 ); # the test is run at line 48
     $self->test_method_can_all_ok( 'MyTest::Empty' );
     test_test( "Tests FAIL when 'can_all_ok' for bad class" );
     
@@ -47,14 +47,12 @@ sub test_method {
     my $self = shift;
     my $method_name = shift;
     
-    my $test_method = join '::',
-        'Test::OpenTracing::Interface',
-        $self->interface_name(),
-        $method_name;
+    my $interface_class = $self->interface_class;
     
     no strict qw/refs/;
     
-    $test_method->( @_ ) # if this is not line 48, than test_fail, will fail
+    $interface_class->$method_name( @_ )
+    # if this above is not line 48, than test_fail, will fail
 }
 
 sub test_object { bless {}, $_[0]->test_class_name() }
