@@ -2,7 +2,7 @@ package Test::OpenTracing::Interface::ScopeManager;
 
 use Test::OpenTracing::Interface;
 
-sub can_interface_ok {
+sub can_all_ok {
     my $thing = shift;
     
     my $Test = Test::OpenTracing::Interface::CanInterface->new(

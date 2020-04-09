@@ -10,7 +10,7 @@ Testing Implementations
 ```perl
 use Test::OpenTracing::Interface::SpanContext;
 
-can_interface_ok( 'MyImplementation::SpanContext',
+can_all_ok( 'MyImplementation::SpanContext',
     "'MyImplementation' class implements required methods for 'SpanContext'";
 
 ```
@@ -33,7 +33,7 @@ interface_lives_ok( $test_object,
 Test::OpenTracing is an easy way to check your OpenTracing compliant framework
 integrations and implementations.
 
-The `can_interface_ok` test, basically run `can_ok` tests.
+The `can_all_ok` test, basically run `can_ok` tests.
 
 The `lives_ok` and `dies_ok` test run a series of test against each
 (required) method, to see if they are fault tolerant or strict on accepting in

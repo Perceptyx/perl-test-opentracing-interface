@@ -9,22 +9,22 @@ use Moo;
 
 has [ qw/interface_name interface_methods/ ] => ( is => 'ro' );
 
-sub run_tests_can_interface_ok {
+sub run_tests_can_all_ok {
     my $self = shift;
     
     test_out( $self->ok_message );
-    $self->test_method_can_interface_ok( $self->test_object() );
-    test_test( "Tests PASS when 'can_interface_ok' for object" );
+    $self->test_method_can_all_ok( $self->test_object() );
+    test_test( "Tests PASS when 'can_all_ok' for object" );
     
     test_out( $self->ok_message );
-    $self->test_method_can_interface_ok( $self->test_class_name );
-    test_test( "Tests PASS when 'can_interface_ok' for class" );
+    $self->test_method_can_all_ok( $self->test_class_name );
+    test_test( "Tests PASS when 'can_all_ok' for class" );
     
     test_out( $self->not_ok_message('MyTest::Empty') );
     test_diag( sort $self->diag_messages );
     test_fail( +23 ); # the test is run at line 46
-    $self->test_method_can_interface_ok( 'MyTest::Empty' );
-    test_test( "Tests FAIL when 'can_interface_ok' for bad class" );
+    $self->test_method_can_all_ok( 'MyTest::Empty' );
+    test_test( "Tests FAIL when 'can_all_ok' for bad class" );
     
     return
     
@@ -32,7 +32,7 @@ sub run_tests_can_interface_ok {
 
 sub test_class_name { 'MyTest::' . $_[0]->interface_name }
 
-sub test_method_can_interface_ok { shift->test_method('can_interface_ok', @_) }
+sub test_method_can_all_ok { shift->test_method('can_all_ok', @_) }
 
 sub test_method {
     my $self = shift;

@@ -13,7 +13,7 @@ my $Test = Test::OpenTracing::Tester::CanInterface->new(
     ],
 );
 
-$Test->run_tests_can_interface_ok;
+$Test->run_tests_can_all_ok;
 
 done_testing();
 
