@@ -2,6 +2,11 @@ package Test::OpenTracing::Interface::Span;
 
 use Test::OpenTracing::Interface;
 
+use Exporter qw/import/;
+
+our @EXPORT_OK = qw/can_all_ok/;
+our %EXPORT_TAGS = ( all => [qw/can_all_ok/] );
+
 use syntax qw/maybe/;
 
 sub can_all_ok {
