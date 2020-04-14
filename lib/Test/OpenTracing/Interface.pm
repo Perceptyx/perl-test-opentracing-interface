@@ -7,9 +7,9 @@ our $VERSION = '0.01_00';
 
 
 
+package Test::OpenTracing::Interface::Base;
+
 use Moo;
-
-
 
 use Scalar::Util qw/blessed/;
 use Types::Standard qw/ClassName Object Str/;
@@ -42,9 +42,9 @@ use warnings;
 
 
 use Moo;
-extends 'Test::OpenTracing::Interface';
 
 
+extends 'Test::OpenTracing::Interface::Base';
 
 use Test::Builder;
 use Types::Standard qw/ArrayRef Str/;
