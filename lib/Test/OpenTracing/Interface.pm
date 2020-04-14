@@ -26,6 +26,12 @@ has test_this => (
     isa => ClassName | Object,
 );
 
+has message => (
+    is => 'ro',
+    isa => Str,
+    predicate => 1,
+);
+
 sub this_name {
     my $self = shift;
     
@@ -91,6 +97,8 @@ sub diag_message {
 
 sub test_message {
     my $self = shift;
+    
+    return $self->message if $self->has_message;
     
     my $this_name = $self->this_name();
     my $interface_name = $self->interface_name;
