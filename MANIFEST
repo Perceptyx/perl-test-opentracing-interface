@@ -6,6 +6,7 @@ lib/Test/OpenTracing/Interface/Span.pm
 lib/Test/OpenTracing/Interface/SpanContext.pm
 lib/Test/OpenTracing/Interface/Tracer.pm
 lib/Test/OpenTracing/Interface.pm
+lib/Test/OpenTracing/Interface.pod
 LICENSE.md
 MANIFEST
 Makefile.PL
