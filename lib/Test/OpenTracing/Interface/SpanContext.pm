@@ -2,9 +2,12 @@ package Test::OpenTracing::Interface::SpanContext;
 
 use Test::OpenTracing::Interface;
 
+use syntax qw/maybe/;
+
 sub can_all_ok {
-    my $class = shift;
-    my $thing = shift;
+    my $class   = shift;
+    my $thing   = shift;
+    my $message = shift;
     
     my $Test = Test::OpenTracing::Interface::CanAll->new(
         test_this           => $thing,
@@ -13,6 +16,8 @@ sub can_all_ok {
             'get_baggage_item',
             'with_baggage_item',
         ],
+        maybe
+        message             => $message,
     );
     
     return $Test->run_tests;

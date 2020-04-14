@@ -2,9 +2,12 @@ package Test::OpenTracing::Interface::ContextReference;
 
 use Test::OpenTracing::Interface;
 
+use syntax qw/maybe/;
+
 sub can_all_ok {
-    my $class = shift;
-    my $thing = shift;
+    my $class   = shift;
+    my $thing   = shift;
+    my $message = shift;
     
     my $Test = Test::OpenTracing::Interface::CanAll->new(
         test_this           => $thing,
@@ -16,6 +19,8 @@ sub can_all_ok {
             'type_is_child_of',
             'type_is_follows_from',
         ],
+        maybe
+        message             => $message,
     );
     
     return $Test->run_tests;
