@@ -47,11 +47,11 @@ sub test_method {
     my $self = shift;
     my $method_name = shift;
     
-    my $interface_class = $self->interface_class;
+    my $test_method = join '::', $self->interface_class, $method_name;
     
     no strict qw/refs/;
     
-    $interface_class->$method_name( @_ )
+    $test_method->( @_ )
     # if this above is not line 48, than test_fail, will fail
 }
 
