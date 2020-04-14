@@ -5,7 +5,6 @@ use Test::OpenTracing::Interface;
 use syntax qw/maybe/;
 
 sub can_all_ok {
-    my $class   = shift;
     my $thing   = shift;
     my $message = shift;
     
