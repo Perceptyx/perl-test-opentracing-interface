@@ -45,11 +45,7 @@ package Test::OpenTracing::Interface::CanAll;
 use strict;
 use warnings;
 
-
-
 use Moo;
-
-
 extends 'Test::OpenTracing::Interface::Base';
 
 use Test::Builder;
@@ -86,6 +82,7 @@ sub run_tests{
 }
 
 
+
 sub diag_message {
     my $self = shift;
     my $method_name = shift;
@@ -94,6 +91,8 @@ sub diag_message {
     
     return "$this_name->can('$method_name') failed"
 }
+
+
 
 sub test_message {
     my $self = shift;
