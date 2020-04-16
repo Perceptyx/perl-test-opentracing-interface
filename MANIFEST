@@ -1,3 +1,4 @@
+CHANGES
 cpanfile
 lib/Test/OpenTracing/Interface/ContextReference.pm
 lib/Test/OpenTracing/Interface/Scope.pm
