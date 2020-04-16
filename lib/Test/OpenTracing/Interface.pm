@@ -3,7 +3,7 @@ package Test::OpenTracing::Interface;
 use strict;
 use warnings;
 
-our $VERSION = '0.01_00';
+our $VERSION = '0.01';
 
 
 

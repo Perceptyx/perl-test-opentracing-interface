@@ -24,6 +24,12 @@ Test::OpenTracing::Interface::ContextReference - compliance testing
 
 =cut
 
+use strict;
+use warnings;
+
+our $VERSION = '0.01';
+
+
 use Test::OpenTracing::Interface;
 
 use Exporter qw/import/;
