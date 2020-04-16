@@ -30,8 +30,8 @@ interface_lives_ok( $test_object,
 
 ## DESCRIPTION
 
-Test::OpenTracing is an easy way to check your OpenTracing compliant framework
-integrations and implementations.
+Test::OpenTracing::Interface is an easy way to check your OpenTracing compliant
+implementations.
 
 The `can_all_ok` test, basically run `can_ok` tests.
 
