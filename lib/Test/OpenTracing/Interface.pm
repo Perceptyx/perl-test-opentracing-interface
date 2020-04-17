@@ -35,7 +35,10 @@ has message => (
 sub this_name {
     my $self = shift;
     
-    return blessed( $self->test_this ) // $self->test_this;
+    my $this_name = defined blessed( $self->test_this ) ?
+        blessed( $self->test_this ) : $self->test_this;
+    
+    return $this_name
 }
 
 
