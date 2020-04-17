@@ -1,6 +1,12 @@
 CHANGE LOG
 ==========
 
+             v0.02
+------------------
+
+fix 'defined or' issues with older Perls
+
+
 
 2020-04-16 - v0.01
 ------------------
