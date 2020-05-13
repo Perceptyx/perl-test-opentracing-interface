@@ -5,6 +5,16 @@ use warnings;
 
 our $VERSION = '0.01';
 
+BEGIN {
+    $ENV{PERL_TYPE_TINY_XS} = undef unless exists $ENV{PERL_TYPE_TINY_XS};
+}
+#
+# ClassName seems to have incompatible implementations (TOBYINK )
+#
+# Turning off the XS version during these tests solve the problem, these tests
+# only test if the tests work properly. As long as this package will not be used
+# in other code, Type::Tiny::XS will still be loaded is possible.
+
 
 
 package Test::OpenTracing::Interface::Base;

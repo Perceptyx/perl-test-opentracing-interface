@@ -5,6 +5,7 @@ CHANGE LOG
 ------------------
 
 Fix 'defined or' issues with older Perls
+Bypass issues with Type::Tiny::XS during internal tests
 
 
 
