@@ -4,7 +4,7 @@ CHANGE LOG
              v0.02
 ------------------
 
-fix 'defined or' issues with older Perls
+Fix 'defined or' issues with older Perls
 
 
 
