@@ -3,7 +3,7 @@ package Test::OpenTracing::Interface;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 BEGIN {
     $ENV{PERL_TYPE_TINY_XS} = undef unless exists $ENV{PERL_TYPE_TINY_XS};
