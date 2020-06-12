@@ -65,7 +65,9 @@ sub can_all_ok {
         interface_name      => 'SpanContext',
         interface_methods   => [
             'get_baggage_item',
+            'get_baggage_items',
             'with_baggage_item',
+            'with_baggage_items',
         ],
         maybe
         message             => $message,
