@@ -64,13 +64,16 @@ sub can_all_ok {
         test_this           => $thing,
         interface_name      => 'Span',
         interface_methods   => [
+            'add_baggage_item',
+            'add_baggage_items',
+            'add_tag',
+            'add_tags',
             'finish',
             'get_baggage_item',
+            'get_baggage_items',
             'get_context',
             'log_data',
             'overwrite_operation_name',
-            'set_baggage_item',
-            'set_tag',
         ],
         maybe
         message             => $message,
