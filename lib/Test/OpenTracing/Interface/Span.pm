@@ -72,6 +72,7 @@ sub can_all_ok {
             'get_baggage_item',
             'get_baggage_items',
             'get_context',
+            'get_tags',
             'log_data',
             'overwrite_operation_name',
         ],
