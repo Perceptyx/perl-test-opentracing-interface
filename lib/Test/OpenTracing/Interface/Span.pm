@@ -69,17 +69,13 @@ sub can_all_ok {
             'add_tag',
             'add_tags',
             'finish',
-#           'get_context',
-#           'get_baggage_item',
-#           'get_baggage_items',
-#           'get_tag',
-#           'get_tags',
+            'get_baggage_item',
+            'get_baggage_items',
+            'get_context',
+            'get_tags',
             'log_data',
             'overwrite_operation_name',
         ],
-        #
-        # XXX Getters are not part of the opaque API
-        #
         maybe
         message             => $message,
     );
