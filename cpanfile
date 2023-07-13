@@ -15,3 +15,19 @@ on 'test' => sub {
     requires    "Test::Most";
     requires    "Test::Builder::Tester";
 };
+
+#   WARNING TOOLCHAIN BREAKAGE
+#   
+#   requires    "syntax";
+#   
+#   pulls in    "Data::OptList"
+#   pulls in    "Sub::Install"
+#   
+#   which in turn will
+#   
+#   requires    "perl", '>=5.12'
+#   
+#   to run on old Perls edit your CI pipelines
+#   or add:
+#   
+#   require     "Data::OptList", '< 0.114';
