@@ -12,6 +12,6 @@ on 'develop' => sub {
 };
 
 on 'test' => sub {
-    requires    "Test::Most";
+    requires    "Test::More";
     requires    "Test::Builder::Tester";
 };
