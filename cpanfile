@@ -12,6 +12,6 @@ on 'develop' => sub {
 };
 
 on 'test' => sub {
-    requires    "Test::Most";
-    requires    "Test::Builder::Tester";
+    requires    "Test::More";
+    requires    "Test::Builder::Tester", '>=1.28'; # because of CR/LF
 };
